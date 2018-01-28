@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <button @click="count++">提交</button>
+        {{count}}
+    <span v-text="count"></span>
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            count:0
+        },
+        methods:{
+//            add:function(){
+//                this.count++;
+//            }
+    }
+    })
+</script>
+</body>
+</html>

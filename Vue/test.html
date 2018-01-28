@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="msg">
+    <button v-on:click="fn('lisi',23)">提交</button>
+    {{msg}}
+
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'aa'
+        },
+        methods:{
+            fn:function (name,age) {
+                console.log(name,age);
+            }
+        }
+    })
+
+
+</script>
+</body>
+</html>
