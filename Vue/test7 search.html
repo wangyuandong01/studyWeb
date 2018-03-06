@@ -31,7 +31,7 @@
 
            } ,
             methods:{
-              add:function() {
+              add() {
                   this.arr.push({val:this.msg,active:false});
                   this.msg = '';
                   this.arr.sort(function (a,b) {
@@ -39,7 +39,7 @@
                   });
                   this.showArr=this.arr;
               },
-                change:function(obj){
+                change(obj){
                     obj.active=!obj.active;
                 },
                 search() {
