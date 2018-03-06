@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--<h1 v-if="show==1">-->
+        <!--hhhhhh-->
+    <!--</h1>-->
+    <!--<h2 v-else-if="show==2">-->
+        <!--ppppp-->
+    <!--</h2>-->
+    <!--<p v-else>eeeee</p>-->
+     <h1 v-show="show">
+         aaaaa
+     </h1>
+</div>
+<script src="vue.js"></script>
+<script>
+var vm= new Vue({
+    el:'#app',
+    data:{
+        show:true
+    }
+})
+</script>
+</body>
+</html>
