@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+   选择需要产品： <input type="checkbox" v-model="show" @click="showFacility">
+    <ul>
+        <li v-for="obj in arr">
+            {{obj.name}}({{obj.price}})
+            <input type="checkbox" v-model="facility" :value="obj">
+        </li>
+    </ul>
+    订单信息：
+    <ul>
+        <li v-for="obj in facility">
+            {{obj.name}}({{obj.price}})
+        </li>
+    </ul>
+    商品总价为:{{total}};
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            show:false,
+            arr:[],
+            facility:[{name:'学府花园' ,price:400}]
+        },
+        computed:{
+            total:function () {
+                var t=0;
+                this.facility.forEach(function (obj) {
+                    t+=obj.price;
+                });
+                return t
+            }
+
+
+        },
+        methods:{
+            showFacility(){
+                if(!this.show){
+                 this.arr=[ {name:'沙发',price:300},
+                            {name:'床',price:250},
+                           {name:'桌椅',price:200}
+                     ]
+                }else {
+                    this.arr=[];
+                    this.facility.splice(1);
+                }
+            }
+
+        }
+    })
+</script>
+</body>
+</html>
