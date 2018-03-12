@@ -6,10 +6,25 @@
 </head>
 <body>
 <div id="app">
-    <demo :msg="a" my-msg-a="ccc"></demo>
-    <demo :msg="b"></demo>
+    <!--<demo :msg="a" my-msg-a="ccc"></demo>-->
+    <!--<demo :msg="b"></demo>-->
+    <demo>
+        <p slot="insted">ppppppp</p>
+        <p slot="insted1">qqqqqqq</p>
+    </demo>
 </div>
 <script src="vue.js"></script>
+<script type="text/x-template" id="temp">
+<div>
+    <slot name="insted">
+        <h1>默认值</h1>
+    </slot>
+    aaaaaaa
+    <slot name="insted1">
+        <h1>默认值</h1>
+    </slot>
+</div>
+</script>
 <script>
     //全局变量
 //Vue.component('demo',{
@@ -23,7 +38,7 @@
         },
         components:{
             demo:{
-                template:'<h1>{{msg}},{{myMsgA}}</h1>',
+                template:'#temp',
                 props:['msg','myMsgA']
             }
         }
