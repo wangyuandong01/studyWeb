@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #dialog-box{
+            width: 300px;
+            height: 200px;
+            background: #ccc;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        #title{
+            background: blue;
+        }
+        .close{
+            float:right;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <button @click="loginShow=true">登录</button>
+    <button @click="regShow=true">注册</button>
+    <mydialog v-show="loginShow" @close="loginShow=false">
+        <span slot="title">登录</span>
+        <div slot="content">
+            name:<input type="text"> <br>
+            password:<input type="password">
+        </div>
+
+    </mydialog>
+    <mydialog v-show="regShow" @close="regShow=false">
+        <span slot="title">注册</span>
+        <div slot="content">
+            name:<input type="text"> <br>
+            password:<input type="password"> <br>
+            再次确认：<input type="password">
+        </div>
+
+    </mydialog>
+</div>
+<script src="vue.js"></script>
+<script type="text/x-template" id="dialog">
+
+    <div id="dialog-box">
+        <div id="title">
+          <slot name="title">
+            title
+          </slot>
+            <span class="close" @click="$emit('close')">[X]</span>
+        </div>
+        <div id="content">
+            <slot name="content">
+                content
+            </slot>
+        </div>
+    </div>
+</script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            loginShow:false,
+            regShow:false
+        },
+        components:{
+         mydialog:{
+             template:'#dialog'
+         }
+        }
+    })
+</script>
+</body>
+</html>
