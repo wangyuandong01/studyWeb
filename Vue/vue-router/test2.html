@@ -47,9 +47,15 @@
     </template>
     <template id="message">
         <ul>
-            <li>Message 01</li>
-            <li>Message 02</li>
-            <li>Message 03</li>
+            <li>
+                <a v-link="{ path: '/home/news/detail/01'}"> Message 01</a>
+            </li>
+            <li>
+                <a v-link="{ path: '/home/news/detail/02'}"> Message 02</a>
+            </li>
+            <li>
+                <a v-link="{ path: '/home/news/detail/03'}"> Message 03</a>
+            </li>
         </ul>
     </template>
 </div>
