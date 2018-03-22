@@ -26,12 +26,24 @@
             <router-view></router-view>
         </div>
     </template>
+    <template id="newsDetail">
+        <div>
+        News Detail - {{$route.params.id}} ......
+        </div>
+    </template>
     <template id="news">
         <ul>
-            <li>News 01</li>
-            <li>News 02</li>
-            <li>News 03</li>
+            <li>
+                <a v-link="{ path: '/home/news/detail/01'}">News 01</a>
+            </li>
+            <li>
+                <a v-link="{ path: '/home/news/detail/02'}">News 02</a>
+            </li>
+            <li>
+                <a v-link="{ path: '/home/news/detail/03'}">News 03</a>
+            </li>
         </ul>
+        <router-view></router-view>
     </template>
     <template id="message">
         <ul>
@@ -60,11 +72,20 @@
     var About = Vue.extend({
         template: '<div><h1>About</h1><p>This is the tutorial about vue-router.</p></div>'
     });
+    var NewsDetail = Vue.extend({
+        template: '#newsDetail'
+    });
     var router = new VueRouter();
     router.map({ '/home': {
-        component: Home, // 定义子路由
+        component: Home,
         subRoutes: { '/news': {
-            component: News
+            name: 'news',
+            component: News,
+            subRoutes: { 'detail/:id': {
+                name: 'detail',
+                component: NewsDetail
+            }
+            }
         }, '/message': {
             component: Message
         }
