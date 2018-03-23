@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+{{msg}}
+</div>
+<script src="vue.js"></script>
+<script>
+   var vm = new Vue({
+        el:'#app',
+        data:{
+          msg:1
+        },
+        beforeCreate:function () {
+            console.log("beforeCreate",this.$el)
+            //属性和dom元素都未创建
+        },
+        created:function () {
+            console.log("created",this.$data)
+//            属性已经创建dom元素还未创建
+        },
+        beforeMount:function () {
+            console.log("beforeMount",this.$el)
+            //可以读到el的app所渲染的元素
+        },
+        mounted:function () {
+            console.log("mounted",this.msg)
+            //可以读到元素挂载的值，即渲染后得到的值
+        },
+        beforeUpdate:function () {
+            console.log("beforeUpdate",this.msg)
+            //当修改里面属性值的时候，该函数被调用将修改后的值输出
+        },
+       updated:function () {
+           console.log("updated",this.msg)
+           //修改完dom结构出现的值
+       },
+       beforeDestory:function () {
+           console.log("beforeDestory",this.msg)
+           //销毁前调用
+       },
+       destory:function () {
+           console.log("destory",this.msg)
+           //销毁后调用
+       }
+    })
+</script>
+</body>
+</html>
