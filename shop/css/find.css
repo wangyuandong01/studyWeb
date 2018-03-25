@@ -7,18 +7,51 @@ header img{
 }
 .jia{
     width:100%;
+    position: relative;
 }
  .jia div{
      font-size:5rem;
      width:20%;
      margin:0 auto;
-     /*display: inline;*/
+
 }
 .jia img{
      width:8%;
-     float:right;
-     margin-right:8%;
- }
- #mp img{
+     margin-left:90%;
+    position: absolute;
 
  }
+
+ #three img{
+   width:13rem;
+     margin-left:2rem;
+     float:left;
+ }
+ #three{
+     height:15rem;
+     font-size: 3rem;
+ }
+#div1{
+    margin-left:11rem;
+    padding-top:1rem;
+
+
+}
+#div2{
+    margin-left:13rem;
+
+}
+#div3{
+margin-right:2rem;
+margin-top:4rem;
+    float:right;
+
+}
+ #four img{
+     width:100%;
+
+ }
+ #four div{
+     font-size: 3rem;
+ }
+
