@@ -95,7 +95,8 @@ margin-top:4rem;
 }
 #footer{
     width:100%;
-    float:left;
+}
+footer li{
     display:inline;
 }
 .div02{
