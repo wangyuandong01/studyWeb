@@ -95,11 +95,18 @@ margin-top:4rem;
 }
 #footer{
     width:100%;
+    float:left;
+    display:flex;
+    position: absolute;
+    bottom:0;
+    background:#28314e;
 }
-footer li{
+#footer li{
+    width:100%;
     display:inline;
+    flex-grow:1;
 }
-.div02{
-    padding-left:17rem
+#footer img{
+    width:120%;
 }
 
