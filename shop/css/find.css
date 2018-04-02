@@ -1,7 +1,8 @@
 #container{
     width:100%;
     background:#f0f0f0;
-
+    height:150rem;
+    position:relative;
 }
 header img{
     width:100%;
@@ -104,7 +105,7 @@ margin-top:4rem;
     display:flex;
     position: absolute;
     background:#28314e;
-    
+    bottom:0rem;
 
 }
 #footer li{
@@ -114,5 +115,6 @@ margin-top:4rem;
 }
 #footer img{
     width:120%;
+
 }
 
