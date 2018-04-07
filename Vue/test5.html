@@ -13,7 +13,7 @@
 </head>
 <body>
 <div id="app">
-    <button @click="fn">change</button>
+    <button @click="isRed=!isRed">change</button>
     <div :class="{red:isRed}"></div>
 </div>
 <script src="vue.js"></script>
@@ -23,11 +23,11 @@
         data:{
         isRed:true
         },
-        methods:{
-         fn:function () {
-             this.isRed=!this.isRed;
-         }
-        }
+//        methods:{
+//         fn:function () {
+//             this.isRed=!this.isRed;
+//         }
+//        }
     })
 </script>
 </body>
