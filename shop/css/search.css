@@ -5,6 +5,7 @@ header img{
     display: -webkit-box;
     -webkit-box-align: center;
     width:100%;
+    height: 8rem;
 
 }
 #div1{
@@ -13,22 +14,33 @@ header img{
 #div2{
     -webkit-box-flex: 1;
     margin:0 auto;
-    curser:p
+    position: relative;
 
 
 }
 #div2 input{
-    width: 30rem;
-    border-radius: 20%;
-
+    margin-left:-10rem;
+    width: 50rem;
+    height:5rem;
+    background: #f0f0f0;
+    border-radius: 5%;
+    border:0.1rem solid #f0f0f0;
+    /*border:none;*/
 }
 #div2 img{
-    float:right;
+   position: absolute;
+    right:-7rem;
+    top:0.7rem;
 
 }
 
 #div3{
     margin-right: 2rem;
+}
+#container{
+    width:100%;
+    height:8rem;
+    font-size: 4rem;
 }
 hr{
     margin-top:2rem;
@@ -36,14 +48,39 @@ hr{
 #div4{
     width: 100%;
     height:4rem;
+    position: relative;
 }
 #div5{
-    float:left;
-    margin-left:2rem;
+
+    /*padding-left:2rem;*/
     line-height: 4rem;
 }
 #div6{
-    float:right;
-    margin-right: 2rem;
-    line-height: 4rem;
+    position: absolute;
+    margin-left: 75rem;
+    margin-top:5rem;
+
+}
+div img{
+    display: block;
+    width:4rem;
+}
+#div7{
+    margin-top: 2rem;
+}
+.same1{
+    float:left;
+    width: 100%;
+    height:8rem;
+    margin-top:3rem;
+    padding:2rem;
+}
+.same2 p{
+    width:1rem;
+    border:0.1rem solid #ccc;
+    display:inline;
+    margin:2rem;
+    text-align: center;
+    padding:2rem;
+    border-radius: 10%;
 }
