@@ -1,0 +1,126 @@
+a{
+    text-decoration: none;
+}
+img{
+    border: 0;
+}
+li{
+    list-style: none;
+}
+/* css重置结束 */
+
+.wrapper{
+    width: 110rem;
+    height: 100%;
+    /*background: #cccccc;*/
+    margin: 0 auto;
+}
+
+/*  header开始  */
+#header{
+    background: url(../img/banner33.jpg) no-repeat center;
+    height: 21rem;
+}
+#login a:hover{
+    text-decoration: underline;
+    /*border-bottom: 1px solid #fff;*/
+}
+#login, #header h1{
+    color: #fff;
+    width: 32rem;
+}
+#login a{
+    color: #fff;
+}
+#main-header #cart{
+    width: 24rem;
+    height: 4rem;
+    background: #000 url(../img/cart.png) 19rem center no-repeat;
+    opacity: .5;/* 取值范围0~1 */
+    filter: alpha(opacity=50);/* ie下  取值范围0~100 */
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 2rem;
+    line-height: 4rem;
+    float: right;
+}
+#cart a{
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+#header img{
+    vertical-align: middle;
+}
+.float{
+    float: left;
+}
+#header h1.float{
+    text-align: center;
+}
+#main-header{
+    height: 8rem;
+    line-height: 8rem;
+    position: relative;
+}
+#nav li{
+    width: 16rem;
+    height: 3rem;
+    background: #fa558f;
+    float: left;
+    text-align: center;
+    line-height: 3rem;
+}
+#nav li:hover{
+    background: #3c3b3b;
+}
+#nav a{
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+#nav .selected{
+    background: #3c3b3b;
+}
+#submenu{
+    width: 95rem;
+    height: 25rem;
+    background: #ccc;
+    margin-left: -16rem;
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+#makeup:hover #submenu{
+    display: block;
+}
+#main-header p{
+    color: #fff;
+    position: absolute;
+    right: 10rem;
+    top: 6rem;
+    height: 2rem;
+    line-height: 2rem;
+    cursor: pointer;
+}
+/*  header结束  */
+
+/* footer开始 */
+#footer{
+    height: 7rem;
+    background: #fa558f;
+    line-height: 7rem;
+}
+#footer h3, #footer h4{
+    color: #fff;
+}
+#footer h3{
+    float: left;
+}
+#footer h4{
+    float: right;
+}
+/* footer结束 */
