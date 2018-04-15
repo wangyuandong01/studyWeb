@@ -1,3 +1,8 @@
+/* css重置开始 */
+*{
+    margin: 0;
+    padding: 0;
+}
 a{
     text-decoration: none;
 }
@@ -10,7 +15,7 @@ li{
 /* css重置结束 */
 
 .wrapper{
-    width: 110rem;
+    width: 1140px;
     height: 100%;
     /*background: #cccccc;*/
     margin: 0 auto;
@@ -19,7 +24,7 @@ li{
 /*  header开始  */
 #header{
     background: url(../img/banner33.jpg) no-repeat center;
-    height: 21rem;
+    height: 250px;
 }
 #login a:hover{
     text-decoration: underline;
@@ -27,22 +32,22 @@ li{
 }
 #login, #header h1{
     color: #fff;
-    width: 32rem;
+    width: 380px;
 }
 #login a{
     color: #fff;
 }
 #main-header #cart{
-    width: 24rem;
-    height: 4rem;
-    background: #000 url(../img/cart.png) 19rem center no-repeat;
+    width: 280px;
+    height: 50px;
+    background: #000 url(../img/cart.png) 230px center no-repeat;
     opacity: .5;/* 取值范围0~1 */
     filter: alpha(opacity=50);/* ie下  取值范围0~100 */
     color: #fff;
     text-align: center;
     cursor: pointer;
-    margin-top: 2rem;
-    line-height: 4rem;
+    margin-top: 25px;
+    line-height: 50px;
     float: right;
 }
 #cart a{
@@ -61,17 +66,17 @@ li{
     text-align: center;
 }
 #main-header{
-    height: 8rem;
-    line-height: 8rem;
+    height: 100px;
+    line-height: 100px;
     position: relative;
 }
 #nav li{
-    width: 16rem;
-    height: 3rem;
+    width: 190px;
+    height: 40px;
     background: #fa558f;
     float: left;
     text-align: center;
-    line-height: 3rem;
+    line-height: 40px;
 }
 #nav li:hover{
     background: #3c3b3b;
@@ -86,10 +91,10 @@ li{
     background: #3c3b3b;
 }
 #submenu{
-    width: 95rem;
-    height: 25rem;
+    width: 1140px;
+    height: 300px;
     background: #ccc;
-    margin-left: -16rem;
+    margin-left: -190px;
     display: none;
     position: relative;
     z-index: 1;
@@ -100,19 +105,19 @@ li{
 #main-header p{
     color: #fff;
     position: absolute;
-    right: 10rem;
-    top: 6rem;
-    height: 2rem;
-    line-height: 2rem;
+    right: 110px;
+    top: 75px;
+    height: 25px;
+    line-height: 25px;
     cursor: pointer;
 }
 /*  header结束  */
 
 /* footer开始 */
 #footer{
-    height: 7rem;
+    height: 82px;
     background: #fa558f;
-    line-height: 7rem;
+    line-height: 82px;
 }
 #footer h3, #footer h4{
     color: #fff;
@@ -124,3 +129,4 @@ li{
     float: right;
 }
 /* footer结束 */
+
