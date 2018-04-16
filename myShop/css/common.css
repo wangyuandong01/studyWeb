@@ -99,8 +99,25 @@ li{
     position: relative;
     z-index: 1;
 }
+#submenu p{
+   padding-top: 20px;
+}
+#submenu #div1{
+    float:left;
+    margin-left: 40px;
+}
+#submenu #div2{
+    float: left;
+    margin-left: 60px;
+}
+#submenu #div3{
+    float: left;
+    margin-left: 80px;
+
+}
 #makeup:hover #submenu{
     display: block;
+
 }
 #main-header p{
     color: #fff;
